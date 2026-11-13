@@ -106,6 +106,7 @@ namespace Exercises
                 if(guessedPin==pin) break;
                 attempts++;
             }while(attempts<3 && guessedPin!=pin);
+
             if(guessedPin == pin)
             {
                 Console.WriteLine("Access Granted");
@@ -118,7 +119,7 @@ namespace Exercises
         // METHODS
         public static void BillHelper()
         {
-            Console.WriteLine($"Calling with subtotal of 50, and a tip of 15%: {CalculateTotalBill(50)}")
+            Console.WriteLine($"Calling with subtotal of 50, and a tip of 15%: {CalculateTotalBill(50)}");
             double CalculateTotalBill(double subtotal, double tipPercentage = 15.0)
             {
                 return subtotal + (subtotal*tipPercentage)/100;
@@ -139,20 +140,117 @@ namespace Exercises
             Console.WriteLine($"Area of a circle with 5 as radius: {CalculateArea(5.0)}");
             Console.WriteLine($"Area of a rectangle with 10 as width and 20 as height: {CalculateArea(10D,20D)}");
             Console.WriteLine($"Area of a triangle with 5 as base length and 25 as height: {CalculateArea(5D, 25D)}");
-            double CalculateArea(double radius)
-            {
-                return Math.PI*(radius*radius);
-            }
-            double CalculateArea(double width, double height)
-            {
-                return width*height;
-            }
-            double CalculateArea(double baseLength, double height, bool isTriangle)
-            {
-                return (0.5 * baseLength * height);
-            }
+            
+        }
+        public static double CalculateArea(double radius)
+        {
+            return Math.PI * (radius * radius);
+        }
+        public static double CalculateArea(double width, double height)
+        {
+            return width * height;
+        }
+        public static double CalculateArea(double baseLength, double height, bool isTriangle)
+        {
+            return (0.5 * baseLength * height);
         }
         // Arrays
-        
+        public static void ManualArrayOperations()
+        {
+            int[] numbers = [1, 5, 16, 4, 29, 54];
+            int largest_number = numbers[0];
+            int smallest_number = numbers[0];
+            int[] numbers_reversed = new int[numbers.Length];
+            for( int i = 0; i < numbers.Length; i++ )
+            {
+                if (numbers[i] < smallest_number) smallest_number = numbers[i];
+                if (numbers[i] > largest_number) largest_number = numbers[i];
+                numbers_reversed[i] = numbers[numbers.Length - i];
+            }
+        }
+        public static void WeeklyTemperatureTracker()
+        {
+            double[] temperatures = new double[7];
+            double temperaturesSum = 0D;
+            double averageTemperature = 0D;
+            for( int i = 0;i < 7; i++)
+            {
+                Console.Write($"Temperatura para el día {i+1}");
+                int temperature = int.Parse(Console.ReadLine());
+                temperaturesSum += temperature;
+                temperatures[i] = temperature;
+            }
+            averageTemperature = temperaturesSum / temperatures.Length;
+            Console.WriteLine($"La temperatura promedio fue {averageTemperature}");
+            Console.WriteLine("Temperaturas de la semana que estuvieron arriba del promedio: ");
+            for( int i = 0;  i < temperatures.Length; i++ )
+            {
+                if (temperatures[i] > averageTemperature) Console.WriteLine($"Dia {i}: {temperatures[i]}");
+            }
+        }
+        //  - Collections
+        // Lists
+        public static void DynamicShoppingListing()
+        {
+            List<string> shoppingList = new List<string>();
+            int userInput = 0;
+            
+            do
+            {
+                printMenu();
+                userInput = int.Parse(Console.ReadLine());
+                switch(userInput) {
+                    case 1:
+                        { 
+                            Console.Write("Adding product!\nProduct name: ");
+                            string productName = Console.ReadLine();
+                            shoppingList.Add(productName);
+                            Console.WriteLine($"Added the product '{productName}' successfully!");
+                            break;
+                        }
+                    case 2:
+                        { 
+                            Console.Write("Deleting a product!\nProduct name: ");
+                            string productName = Console.ReadLine() ;
+                            if (shoppingList.Remove(productName))
+                            {
+                                Console.WriteLine($"Deleted the product '{productName}' successfully!");
+                            } else
+                            {
+                                Console.WriteLine($"The product '{productName}' wasn't found in the shoppping list!");
+                            }                         
+                            break;
+                        }
+                    case 3:
+                        {
+                            Console.WriteLine($"Total products: {shoppingList.Count}");
+                            for ( int i = 0;i < shoppingList.Count; i++)
+                            {
+                                Console.WriteLine($"{i + 1}.- {shoppingList[i]}");
+                            }
+                            break;
+                        }
+                    case -1:
+                        {
+                            continue;
+                        }
+                    default:
+                        Console.WriteLine("Unknown command!");
+                        break;
+                }
+                Console.ReadKey();
+                Console.Clear();
+                // add 
+
+                // delete. "Item not found" if doesn't exist
+                // show total items and the items numbered
+                // quit
+            } while (userInput != -1);
+            void printMenu()
+            {
+                Console.WriteLine("Dynamic Shopping Listing!");
+                Console.WriteLine("Enter 1 to add products.\nEnter 2 to delete a product.\nEnter 3 to show total products and ennumerate them.\n Enter -1 to exit.");
+            }
+        }
     }
 }
