@@ -252,5 +252,40 @@ namespace Exercises
                 Console.WriteLine("Enter 1 to add products.\nEnter 2 to delete a product.\nEnter 3 to show total products and ennumerate them.\n Enter -1 to exit.");
             }
         }
+        public static void EventAttendanceTracker()
+        {
+            HashSet<string> day1Attendes = new HashSet<string>();
+            HashSet<string> day2Attendes = new HashSet<string>();
+            for ( int i = 0 ; i < 11 ; i++ ) {
+                if(i%2==0) {
+                    day2Attendes.Add($"correo{i}@gmail.com");
+                    continue;
+                }
+                if (i % 5 == 0)
+                {
+                    day2Attendes.Add($"correo{i}@gmail.com");
+                }
+                day1Attendes.Add($"correo{i}@gmail.com");
+            }
+            foreach (string attendee in day1Attendes)
+            {
+                Console.WriteLine($"- Attendee: {attendee}");
+            }
+            foreach (string attendee in day2Attendes)
+            {
+                Console.WriteLine($"- Attendee: {attendee}");
+            }
+            // All attendes across both days
+            Console.WriteLine("All Attendees");
+            foreach( string attendee in day1Attendes.Union(day2Attendes)) {
+                Console.WriteLine($"- Attendee: {attendee}");
+            }
+            day2Attendes.IntersectWith(day1Attendes);
+            Console.WriteLine("Loyal Attendees");
+            foreach(string attendee in day2Attendes  ) {
+                Console.WriteLine($"- Attendee: {attendee}");
+            }
+            // Loyal attendes who attended both days
+        }
     }
 }
