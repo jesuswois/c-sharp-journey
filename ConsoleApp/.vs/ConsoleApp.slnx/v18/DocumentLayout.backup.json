@@ -1,13 +1,17 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Chucho\\Documents\\git\\jesuswois\\c-sharp-journey\\ConsoleApp\\",
+  "WorkspaceRootPath": "C:\\Users\\Jesus\\Documents\\Personal\\Gitted Repositories\\jesuswois\\c-sharp-journey\\ConsoleApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B003331C-F489-1E10-2D31-99153740F43C}|ConsoleApp.csproj|c:\\users\\chucho\\documents\\git\\jesuswois\\c-sharp-journey\\consoleapp\\exercise.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{1501BC01-1CC6-4BE2-8D06-9596F1786D1B}|Elementos de la soluci\u00F3n{1501BC01-1CC6-4BE2-8D06-9596F1786D1B}|C:\\Users\\Jesus\\Documents\\Personal\\Gitted Repositories\\jesuswois\\c-sharp-journey\\ConsoleApp\\OOP.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1501BC01-1CC6-4BE2-8D06-9596F1786D1B}|Elementos de la soluci\u00F3n{1501BC01-1CC6-4BE2-8D06-9596F1786D1B}|solutionrelative:OOP.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B003331C-F489-1E10-2D31-99153740F43C}|ConsoleApp.csproj|c:\\users\\jesus\\documents\\personal\\gitted repositories\\jesuswois\\c-sharp-journey\\consoleapp\\exercise.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B003331C-F489-1E10-2D31-99153740F43C}|ConsoleApp.csproj|solutionrelative:exercise.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B003331C-F489-1E10-2D31-99153740F43C}|ConsoleApp.csproj|c:\\users\\chucho\\documents\\git\\jesuswois\\c-sharp-journey\\consoleapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B003331C-F489-1E10-2D31-99153740F43C}|ConsoleApp.csproj|c:\\users\\jesus\\documents\\personal\\gitted repositories\\jesuswois\\c-sharp-journey\\consoleapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B003331C-F489-1E10-2D31-99153740F43C}|ConsoleApp.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -23,28 +27,44 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Exercise.cs",
-              "DocumentMoniker": "C:\\Users\\Chucho\\Documents\\git\\jesuswois\\c-sharp-journey\\ConsoleApp\\Exercise.cs",
-              "RelativeDocumentMoniker": "Exercise.cs",
-              "ToolTip": "C:\\Users\\Chucho\\Documents\\git\\jesuswois\\c-sharp-journey\\ConsoleApp\\Exercise.cs",
-              "RelativeToolTip": "Exercise.cs",
-              "ViewState": "AgIAAPsAAAAAAAAAAAAAABcBAAA3AAAAAAAAAA==",
+              "Title": "OOP.cs",
+              "DocumentMoniker": "C:\\Users\\Jesus\\Documents\\Personal\\Gitted Repositories\\jesuswois\\c-sharp-journey\\ConsoleApp\\OOP.cs",
+              "RelativeDocumentMoniker": "OOP.cs",
+              "ToolTip": "C:\\Users\\Jesus\\Documents\\Personal\\Gitted Repositories\\jesuswois\\c-sharp-journey\\ConsoleApp\\OOP.cs",
+              "RelativeToolTip": "OOP.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAIwBMAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-03T19:08:18.057Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-14T23:18:04.292Z",
+              "EditorCaption": "",
+              "OwnerCaption": "%3"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "Exercise.cs",
+              "DocumentMoniker": "C:\\Users\\Jesus\\Documents\\Personal\\Gitted Repositories\\jesuswois\\c-sharp-journey\\ConsoleApp\\Exercise.cs",
+              "RelativeDocumentMoniker": "Exercise.cs",
+              "ToolTip": "C:\\Users\\Jesus\\Documents\\Personal\\Gitted Repositories\\jesuswois\\c-sharp-journey\\ConsoleApp\\Exercise.cs",
+              "RelativeToolTip": "Exercise.cs",
+              "ViewState": "AgIAADkBAAAAAAAAAAAAADkBAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-03T19:08:18.057Z",
+              "EditorCaption": "",
+              "OwnerCaption": "%2"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Chucho\\Documents\\git\\jesuswois\\c-sharp-journey\\ConsoleApp\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\Jesus\\Documents\\Personal\\Gitted Repositories\\jesuswois\\c-sharp-journey\\ConsoleApp\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\Chucho\\Documents\\git\\jesuswois\\c-sharp-journey\\ConsoleApp\\Program.cs",
+              "ToolTip": "C:\\Users\\Jesus\\Documents\\Personal\\Gitted Repositories\\jesuswois\\c-sharp-journey\\ConsoleApp\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAqAAAAAAAAAA==",
+              "ViewState": "AgIAACIAAAAAAAAAAAAqwC4AAABCAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-11-03T17:00:06.323Z",
-              "EditorCaption": ""
+              "EditorCaption": "",
+              "OwnerCaption": "%2"
             }
           ]
         }

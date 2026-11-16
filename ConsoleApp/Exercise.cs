@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Diagnostics.Tracing;
 using System.Numerics;
 using System.Text;
 
@@ -103,11 +104,11 @@ namespace Exercises
             do
             {
                 guessedPin = Console.ReadLine();
-                if(guessedPin==pin) break;
+                if (guessedPin == pin) break;
                 attempts++;
-            }while(attempts<3 && guessedPin!=pin);
+            } while (attempts < 3 && guessedPin != pin);
 
-            if(guessedPin == pin)
+            if (guessedPin == pin)
             {
                 Console.WriteLine("Access Granted");
             }
@@ -122,7 +123,7 @@ namespace Exercises
             Console.WriteLine($"Calling with subtotal of 50, and a tip of 15%: {CalculateTotalBill(50)}");
             double CalculateTotalBill(double subtotal, double tipPercentage = 15.0)
             {
-                return subtotal + (subtotal*tipPercentage)/100;
+                return subtotal + (subtotal * tipPercentage) / 100;
             }
         }
         public static void TemperatureHelper()
@@ -132,15 +133,15 @@ namespace Exercises
             Console.WriteLine($"{celsius} celsius = {CelsiusToFahrenheit(celsius)} fahrenheit");
             double CelsiusToFahrenheit(double celsius)
             {
-                return (celsius * 9 / 5 ) + 32;
+                return (celsius * 9 / 5) + 32;
             }
         }
         public static void MethodOverloading()
         {
             Console.WriteLine($"Area of a circle with 5 as radius: {CalculateArea(5.0)}");
-            Console.WriteLine($"Area of a rectangle with 10 as width and 20 as height: {CalculateArea(10D,20D)}");
+            Console.WriteLine($"Area of a rectangle with 10 as width and 20 as height: {CalculateArea(10D, 20D)}");
             Console.WriteLine($"Area of a triangle with 5 as base length and 25 as height: {CalculateArea(5D, 25D)}");
-            
+
         }
         public static double CalculateArea(double radius)
         {
@@ -161,7 +162,7 @@ namespace Exercises
             int largest_number = numbers[0];
             int smallest_number = numbers[0];
             int[] numbers_reversed = new int[numbers.Length];
-            for( int i = 0; i < numbers.Length; i++ )
+            for (int i = 0; i < numbers.Length; i++)
             {
                 if (numbers[i] < smallest_number) smallest_number = numbers[i];
                 if (numbers[i] > largest_number) largest_number = numbers[i];
@@ -173,9 +174,9 @@ namespace Exercises
             double[] temperatures = new double[7];
             double temperaturesSum = 0D;
             double averageTemperature = 0D;
-            for( int i = 0;i < 7; i++)
+            for (int i = 0; i < 7; i++)
             {
-                Console.Write($"Temperatura para el día {i+1}");
+                Console.Write($"Temperatura para el día {i + 1}");
                 int temperature = int.Parse(Console.ReadLine());
                 temperaturesSum += temperature;
                 temperatures[i] = temperature;
@@ -183,7 +184,7 @@ namespace Exercises
             averageTemperature = temperaturesSum / temperatures.Length;
             Console.WriteLine($"La temperatura promedio fue {averageTemperature}");
             Console.WriteLine("Temperaturas de la semana que estuvieron arriba del promedio: ");
-            for( int i = 0;  i < temperatures.Length; i++ )
+            for (int i = 0; i < temperatures.Length; i++)
             {
                 if (temperatures[i] > averageTemperature) Console.WriteLine($"Dia {i}: {temperatures[i]}");
             }
@@ -194,14 +195,15 @@ namespace Exercises
         {
             List<string> shoppingList = new List<string>();
             int userInput = 0;
-            
+
             do
             {
                 printMenu();
                 userInput = int.Parse(Console.ReadLine());
-                switch(userInput) {
+                switch (userInput)
+                {
                     case 1:
-                        { 
+                        {
                             Console.Write("Adding product!\nProduct name: ");
                             string productName = Console.ReadLine();
                             shoppingList.Add(productName);
@@ -209,22 +211,23 @@ namespace Exercises
                             break;
                         }
                     case 2:
-                        { 
+                        {
                             Console.Write("Deleting a product!\nProduct name: ");
-                            string productName = Console.ReadLine() ;
+                            string productName = Console.ReadLine();
                             if (shoppingList.Remove(productName))
                             {
                                 Console.WriteLine($"Deleted the product '{productName}' successfully!");
-                            } else
+                            }
+                            else
                             {
                                 Console.WriteLine($"The product '{productName}' wasn't found in the shoppping list!");
-                            }                         
+                            }
                             break;
                         }
                     case 3:
                         {
                             Console.WriteLine($"Total products: {shoppingList.Count}");
-                            for ( int i = 0;i < shoppingList.Count; i++)
+                            for (int i = 0; i < shoppingList.Count; i++)
                             {
                                 Console.WriteLine($"{i + 1}.- {shoppingList[i]}");
                             }
@@ -249,15 +252,33 @@ namespace Exercises
             void printMenu()
             {
                 Console.WriteLine("Dynamic Shopping Listing!");
-                Console.WriteLine("Enter 1 to add products.\nEnter 2 to delete a product.\nEnter 3 to show total products and ennumerate them.\n Enter -1 to exit.");
+                Console.WriteLine("Enter 1 to add products.\nEnter 2 to delete a product.\nEnter 3 to show total products and ennumerate them.\nEnter -1 to exit.");
+            }
+        }
+        public static void WordFrequencyCounter()
+        {
+            Dictionary<string, int> wordCount = new Dictionary<string, int>();
+            string promptWord = Console.ReadLine();
+            string[] words = promptWord.Split(' ');
+            foreach (string word in words)
+            {
+                if (wordCount.ContainsKey(word)) { wordCount[word]++; continue; }
+                wordCount.Add(word, 1);
+            }
+            Console.WriteLine("Words counted...");
+            foreach (string word in wordCount.Keys.ToList())
+            {
+                Console.WriteLine($"{word}: {wordCount[word]}");
             }
         }
         public static void EventAttendanceTracker()
         {
             HashSet<string> day1Attendes = new HashSet<string>();
             HashSet<string> day2Attendes = new HashSet<string>();
-            for ( int i = 0 ; i < 11 ; i++ ) {
-                if(i%2==0) {
+            for (int i = 0; i < 11; i++)
+            {
+                if (i % 2 == 0)
+                {
                     day2Attendes.Add($"correo{i}@gmail.com");
                     continue;
                 }
@@ -277,12 +298,14 @@ namespace Exercises
             }
             // All attendes across both days
             Console.WriteLine("All Attendees");
-            foreach( string attendee in day1Attendes.Union(day2Attendes)) {
+            foreach (string attendee in day1Attendes.Union(day2Attendes))
+            {
                 Console.WriteLine($"- Attendee: {attendee}");
             }
             day2Attendes.IntersectWith(day1Attendes);
             Console.WriteLine("Loyal Attendees");
-            foreach(string attendee in day2Attendes  ) {
+            foreach (string attendee in day2Attendes)
+            {
                 Console.WriteLine($"- Attendee: {attendee}");
             }
             // Loyal attendes who attended both days
